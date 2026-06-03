@@ -23,7 +23,8 @@ function checkDate($day, $month, $year)
     }
 }
 
-function compareDates() {
+function compareDates()
+{
     $day1 = 4;
     $day2 = 6;
     $month1 = 5;
@@ -41,3 +42,98 @@ function compareDates() {
 }
 
 echo compareDates();
+
+//
+
+function checkOneMoreDate(?int $day, string $month, float $p, bool $flag): bool
+{
+    $isValidDate = false;
+
+    // ...
+
+    $isValidDate = true;
+
+    return $isValidDate;
+}
+
+$isValid = checkOneMoreDate(7, 6, 4.5, false);
+
+if ($isValid) {
+// if ($isValid == true) {
+    echo 'Yes';
+} else {
+    echo 'No';
+}
+
+function showNumber(int $number): void
+{
+    echo '<p>' . $number . '</p>';
+}
+
+$number = null;
+
+
+//
+
+function test()
+{
+    $b = 0;
+    $a = 1;
+
+    if ($a == 1) {
+        $b = 2;
+    } else {
+        $b = $a + 1;
+    }
+
+    // тернарный оператор
+
+    $b = $a == 1 ? 2 : $a + 1;
+
+    $day = 6;
+    $k = null;
+
+    if ($day == 1) {
+        $k = 5;
+    } elseif ($day == 2) {
+        $k = 6;
+    } elseif ($day == 3) {
+        $k = 6;
+    } elseif ($day == 4) {
+        $k = 6;
+    } elseif ($day == 6) {
+        $k = 7;
+    }
+
+    switch ($day) {
+        case 1:
+            $k = 5;
+            break;
+        case 2:
+            $k = 6;
+            break;
+        case 3:
+            $k = 9;
+            break;
+        default:
+            $k = 10;
+    }
+
+    echo $k;
+
+    //
+    $a = 0.10;
+    $b = 0.7;
+
+    $c = $a + $b; // 0.799999999924235993423
+
+    $eps = 0.001;
+    $c = 0.8;
+    $d = 0.7999999;
+
+    if (($c - ($a + $b)) < 0.000001) {
+        echo 'equal';
+    }
+}
+
+
